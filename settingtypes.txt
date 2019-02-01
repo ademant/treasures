@@ -1,0 +1,1 @@
+treasures.prefix (Prefix for variable name) string "treasure"
