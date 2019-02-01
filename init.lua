@@ -12,6 +12,7 @@ minetest.log("action", "[MOD]"..minetest.get_current_modname().." -- start loadi
 -- import settingtypes.txt
 basic_functions.import_settingtype(treasure.path .. "/settingtypes.txt")
 
+dofile(treasure.path .. "/config.lua") -- config
 dofile(treasure.path .. "/api.lua") -- API
 dofile(treasure.path .. "/treasures.lua") -- API
 
