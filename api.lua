@@ -44,7 +44,11 @@ M.add_treasure=function(name,tdef)
 end
 
 M.add_drop=function(name,drop_def)
-	if drop_def.name == nil then
+	if drop_def.items == nil then
+		return
+	end
+	if minetest.registered_items[drop_def.items[1]:split(" ")[1]] == nil then
+		print(dump2(drop_def.items[1]:split(" ")[1]))
 		return
 	end
 	if drop_def.rarety == nil then
@@ -59,9 +63,9 @@ M.add_drop=function(name,drop_def)
 		M.add_treasure(name,tdef)
 	else
 		local tdef={}
-		tdef.drop=table.copy(minetest.registered_items[name])
-		table.insert(tdef.drop,drop_def)
-		minetest.override_item(name,tdef)
+		tdef=table.copy(minetest.registered_items[name])
+		table.insert(tdef.drop.items,math.random(1,#tdef.drop.items),drop_def)
+		minetest.register_node(":"..name,tdef)
 	end
 
 end

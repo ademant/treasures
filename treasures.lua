@@ -1,6 +1,6 @@
 treasures.add_treasure("treasures:treasure1", {
 		description = "".. core.colorize("#BFFFFF", "Wooden loot crate\n")..core.colorize("#A0A0A0", "tier: 2 (uncommon)"),
-	tiles = {"minerdream_treasure1.png"},
+	tiles = {"treasures_treasure1.png"},
 	groups = {cracky = 3, choppy = 3},
 	drop = {
 		max_items = 5,
@@ -21,7 +21,7 @@ treasures.add_treasure("treasures:treasure1", {
 
 treasures.add_treasure("treasures:treasure2", {
 		description = "".. core.colorize("#00FFFF", "Sturdy wooden loot crate\n")..core.colorize("#A0A0A0", "tier: 3 (almost rare)"),
-	tiles = {"minerdream_treasure2.png"},
+	tiles = {"treasures_treasure2.png"},
 	groups = {cracky = 2, choppy = 2},
 	drop = {
 		max_items = 5,
@@ -41,7 +41,7 @@ treasures.add_treasure("treasures:treasure2", {
 
 treasures.add_treasure("treasures:treasure3", {
 		description = "".. core.colorize("#40FF80", "Reinforced wooden loot crate\n")..core.colorize("#A0A0A0", "tier: 4 (rare)"),
-	tiles = {"minerdream_treasure3.png"},
+	tiles = {"treasures_treasure3.png"},
 	groups = {cracky = 1, choppy = 1},
 	drop = {
 		max_items = 5,
@@ -57,7 +57,7 @@ treasures.add_treasure("treasures:treasure3", {
 
 treasures.add_treasure("treasures:treasure4", {
 		description = "".. core.colorize("#0040FF", "Well-reinforced wooden loot crate\n")..core.colorize("#A0A0A0", "tier: 5 (extra rare)"),
-	tiles = {"minerdream_treasure4.png"},
+	tiles = {"treasures_treasure4.png"},
 	groups = {cracky = 4, choppy = 1},
 	drop = {
 		max_items = 5,
@@ -72,7 +72,7 @@ treasures.add_treasure("treasures:treasure4", {
 
 treasures.add_treasure("treasures:treasure5", {
 		description = "".. core.colorize("#00FF00", "Steel loot crate\n")..core.colorize("#A0A0A0", "tier: 6 (epic)"),
-	tiles = {"minerdream_treasure5.png"},
+	tiles = {"treasures_treasure5.png"},
 	groups = {cracky = 5},
 	drop = {
 		max_items = 5,
