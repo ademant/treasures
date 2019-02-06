@@ -2,18 +2,33 @@
 local M=treasures
 
 M.update_treasure=function(name,tdef)
-	if M.registered_treasures[name] == nil then
+	if minetest.registered_items[name] == nil then
 		M.add_treasure(name,tdef)
 	else
 		minetest.override_item(name,tdef)
 	end
 end
 
+M.map_treasure=function(name,tdef)
+	if tdef == nil then return end
+	if minetest.registered_items[name] == nil then 
+		print(name.." not yet registered")
+		M.add_treasure(name,M.treasure_default)
+	end
+	for i,attr in ipairs({"ore_type","wherein","clust_scarcity","clust_num_ores","clust_size","y_min","y_max"}) do
+		if tdef[attr]==nil then
+			tdef[attr]=M.map_def[attr]
+		end
+	end
+	if tdef.ore == nil then tdef.ore=name end
+	minetest.register_ore(tdef)
+end
+
 M.add_treasure=function(name,tdef)
 	if tdef.tiles == nil then
 		return
 	end
-	if M.registered_treasures[name] ~= nil then
+	if minetest.registered_items[name] ~= nil then
 		minetest.override_item(name,tdef)
 	else
 		for i,attr in ipairs({"is_ground_content","groups","sounds","drop"}) do

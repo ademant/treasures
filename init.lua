@@ -15,6 +15,6 @@ basic_functions.import_settingtype(treasures.path .. "/settingtypes.txt")
 dofile(treasures.path .. "/config.lua") -- config
 dofile(treasures.path .. "/api.lua") -- API
 dofile(treasures.path .. "/treasures.lua") -- API
-
+dofile(treasures.path .. "/map_gen.lua") -- API
 
 minetest.log("action", "[MOD]"..minetest.get_current_modname().." -- loaded ")

@@ -1,5 +1,7 @@
 treasures.max_level =  tonumber(minetest.settings:get("treasures.max_level")) or 5
 
+treasures.registered_treasures={}
+
 treasures.treasure_default={
 	is_ground_content = false,
 	groups = {cracky = 3, choppy = 3},
@@ -14,7 +16,7 @@ treasures.treasure_default={
 	},
 }
 
-trasures.map_def={ore_type    = "scatter",
+treasures.map_def={ore_type    = "scatter",
 			wherein        = "default:stone",
 			clust_scarcity = 10 * 10 * 10,
 			clust_num_ores = 1,
