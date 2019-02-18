@@ -47,8 +47,11 @@ M.add_drop=function(name,drop_def)
 	if drop_def.items == nil then
 		return
 	end
-	
-	if minetest.registered_items[drop_def.items:split(" ")[1]] == nil then
+	local add_item = drop_def.items
+	if add_item[1] ~= nil then
+		add_item=add_item[1]
+	end
+	if minetest.registered_items[add_item:split(" ")[1]] == nil then
 		return
 	end
 	if drop_def.rarety == nil then
